@@ -9,11 +9,17 @@ markdown: kramdown
 kramdown:
   input: GFM
   math_engine: mathjax
-use_math: true
 
 plugins:
   - jekyll-seo-tag
   - jekyll-remote-theme
+
+# Enable MathJax globally
+defaults:
+  - scope:
+      path: ""     # applies to all pages
+    values:
+      mathjax: true
 
 # ──────────────────────────────
 # Visual Options
