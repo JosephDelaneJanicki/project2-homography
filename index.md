@@ -310,13 +310,5 @@ Adding **anchor points** (cheeks/chin) localizes TPS; adding **more triangles** 
 - The Cat→Bulbasaur demo shows both are mathematically correct—just different continuity assumptions and deformation behavior.
 
 **Author:** Joseph Janicki · **Course:** Computer Vision · **Term:** Fall 2025
-<!-- MathJax for rendering LaTeX -->
-<script>
-  MathJax = {
-    tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]},
-    svg: {fontCache: 'global'}
-  };
-</script>
-<script id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
 
