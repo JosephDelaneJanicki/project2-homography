@@ -59,13 +59,13 @@ h1 .star { margin:0 6px; font-size:1.1em; }
 
 This project explored how 2D transformations can manipulate and align images using homography and warping.  
 **Part 1** focuses on rectification (manual correspondences).  
-**Part 2** builds an automatic pipeline (vanishing points, masking, contour scoring).  
+**Part 2** poster projection, then an automatic pipeline (vanishing points, masking, contour scoring).  
 **Part 3** compares **Triangular Mesh (Piecewise Affine)** vs **Thin Plate Spline (TPS)** warping.
 
 <div style="background:rgba(16,18,39,0.55); border:1px solid rgba(255,255,255,0.08);
 border-radius:12px; padding:12px 18px; margin:18px 0; color:#FFC857;
 box-shadow:0 0 12px rgba(111,76,255,0.25); font-weight:500;">
-<span class="star">💫</span> <strong>Tip:</strong> Many sections below are <em>clickable</em> — tap the golden bars ▾ to expand or collapse detailed discussions, results, and reflections.
+<span class="star">💫</span> <strong>Tip:</strong> Many sections below are <em>clickable</em> — tap the golden pulsing stars to expand or collapse detailed discussions, results, and reflections.
 </div>
 
 <div class="hr"></div>
@@ -143,12 +143,12 @@ Because the transform preserves projective geometry, the poster adheres convinci
 
 <p align="center">
   <img src="images/virtual_poster.jpg" width="65%" class="space-img">
-  <br><span class="space-caption">Baseline AR projection using the rectified homography.</span>
+  <br><span class="space-caption">texture being projected.</span>
 </p>
 
 <p align="center">
   <img src="images/ar_insert.png" width="65%" class="space-img">
-  <br><span class="space-caption">Initial automatic projection based on vanishing-point geometry.</span>
+  <br><span class="space-caption">Initial projection using clicked points.</span>
 </p>
 
 ---
@@ -156,10 +156,10 @@ Because the transform preserves projective geometry, the poster adheres convinci
 <details>
 <summary><strong>2) Observations and Limitations of the Baseline <span class="star">✨</span> </strong></summary>
 
-The baseline successfully demonstrated planar alignment—the poster appeared naturally attached to the surface.  
+The baseline successfully made the poster appeared naturally attached to the surface.  
 However, it still relied on manual point correspondences.  
-This limited scalability: in new scenes, the quad had to be chosen by hand, and noise or camera angle changes could break the illusion.  
-These observations motivated my attempt to **automate the planar region detection** process.
+i wanted to automatically determine points: in new scenes, the quad had to be chosen by hand, and noise or camera angle changes could break the illusion.  
+These observations motivated my attempt to **automate the planar region detection and point choice** process.
 </details>
 
 ---
@@ -302,3 +302,4 @@ Adding **anchor points** (cheeks/chin) localizes TPS; adding **more triangles** 
 - The Cat→Bulbasaur demo shows both are mathematically correct—just different continuity assumptions and deformation behavior.
 
 **Author:** Joseph Janicki · **Course:** Computer Vision · **Term:** Fall 2025
+
