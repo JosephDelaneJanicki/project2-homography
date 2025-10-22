@@ -1,0 +1,38 @@
+# ──────────────────────────────
+# Site Configuration
+# ──────────────────────────────
+title: "Project 2 – Image Homography and Warping"
+description: "Comparison of Homography, Triangular Mesh, and Thin Plate Spline Warping"
+remote_theme: daattali/beautiful-jekyll
+markdown: kramdown
+plugins:
+  - jekyll-seo-tag
+
+# ──────────────────────────────
+# Visual Options
+# ──────────────────────────────
+darkmode: true
+
+title-img: "/assets/images/nebula-header.jpg"
+
+accent-color: "#FFC857"
+
+custom-css:
+  - "/assets/css/style.css"
+
+# ──────────────────────────────
+# Navigation Bar Links
+# ──────────────────────────────
+navbar-links:
+  Home: "index.md"
+  Source Code: "https://github.com/YOUR-USERNAME/YOUR-REPO"
+  About:
+    - "About the Project": "index.md#project-overview"
+    - "Contact": "mailto:Joseph.D.Janicki@gmail.com"
+
+# ──────────────────────────────
+# 🪐 Author Info
+# ──────────────────────────────
+author:
+  name: "Joseph Janicki"
+  email: "joeydjanicki@gmail.com"
