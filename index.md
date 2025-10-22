@@ -274,8 +274,8 @@ Neither is “wrong”—they’re each **correct** under their continuity assum
 </p>
 
 <!-- Step: Summary panel -->
-<details>
-<summary><strong>3) Discussion & takeaways <span class="star">✨</span> </strong></summary>
+<details markdown="1">
+<summary><strong>3) Discussion & takeaways <span class="star">✨</span></strong></summary>
 
 **Rectification vs Warping.** Rectification with a homography is like **moving the camera** so the plane faces you.  
 Warping is like **bending the surface** in 2D to force points to new locations.
@@ -283,11 +283,11 @@ Warping is like **bending the surface** in 2D to force points to new locations.
 **Why TPS bends the whole image.**  
 TPS solves:
 
-$
+$$
 f(\mathbf{p}) = a_0 + a_x x + a_y y + \sum_i w_i\,U(\|\mathbf{p}-\mathbf{c}_i\|), \quad U(r)=r^2\log r^2.
-$
+$$
 
-Because \(U\) has global support, moving a landmark influences the entire field smoothly.
+Because \(U\) has global support, moving a landmark influences the entire field smoothly.  
 **Why PWA looks faceted.** PWA triangulates the domain and applies affine maps per triangle (C⁰ continuous, not C¹).  
 It preserves local linearity but introduces visible seams if landmarks are sparse or far apart.
 
@@ -313,6 +313,7 @@ Adding **anchor points** (cheeks/chin) localizes TPS; adding **more triangles** 
 - The Cat→Bulbasaur demo shows both are mathematically correct—just different continuity assumptions and deformation behavior.
 
 **Author:** Joseph Janicki · **Course:** Computer Vision · **Term:** Fall 2025
+
 
 
 
