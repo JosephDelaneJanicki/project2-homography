@@ -52,7 +52,16 @@ title: "Project 2 – Image Homography and Warping"
 
 h1 { text-align:center; }
 h1 .star { margin:0 6px; font-size:1.1em; }
-
+  
+mjx-container {
+  color: #FFC857;              /* golden math text */
+  text-shadow: 0 0 6px rgba(255,200,87,0.3); /* subtle glow */
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+mjx-container[MathJax-Finished="true"] {
+  opacity: 1;
+}
 </style>
 
 # Project 2: <span class="star">🌟</span> Image Homography and Warping
@@ -271,9 +280,10 @@ Neither is “wrong”—they’re each **correct** under their continuity assum
 **Rectification vs Warping.** Rectification with a homography is like **moving the camera** so the plane faces you.  
 Warping is like **bending the surface** in 2D to force points to new locations.
 
-**Why TPS bends the whole image.** TPS solves  
-\( f(\mathbf{p}) = a_0 + a_x x + a_y y + \sum_i w_i\,U(\|\mathbf{p}-\mathbf{c}_i\|) \), with \( U(r)=r^2\log r^2 \).  
-Because \(U\) has **global support**, moving a landmark influences the entire field (smoothly).
+**Why TPS bends the whole image.**  
+TPS solves  
+$$ f(\mathbf{p}) = a_0 + a_x x + a_y y + \sum_i w_i\,U(\|\mathbf{p}-\mathbf{c}_i\|), \quad U(r)=r^2\log r^2. $$
+Because \(U\) has global support, moving a landmark influences the entire field smoothly.
 
 **Why PWA looks faceted.** PWA triangulates the domain and applies affine maps per triangle (C⁰ continuous, not C¹).  
 It preserves local linearity but introduces visible seams if landmarks are sparse or far apart.
@@ -300,6 +310,12 @@ Adding **anchor points** (cheeks/chin) localizes TPS; adding **more triangles** 
 - The Cat→Bulbasaur demo shows both are mathematically correct—just different continuity assumptions and deformation behavior.
 
 **Author:** Joseph Janicki · **Course:** Computer Vision · **Term:** Fall 2025
-
-
-
+<!-- MathJax for rendering LaTeX -->
+<script>
+  MathJax = {
+    tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]},
+    svg: {fontCache: 'global'}
+  };
+</script>
+<script id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
