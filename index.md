@@ -3,7 +3,7 @@ title: "Project 2 – Image Homography and Warping"
 ---
 
 <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
-
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 <!-- Tiny extras to style dropdowns and captions nicely -->
 <style>
   details { margin: 16px 0; }
@@ -313,3 +313,4 @@ Adding **anchor points** (cheeks/chin) localizes TPS; adding **more triangles** 
 - The Cat→Bulbasaur demo shows both are mathematically correct—just different continuity assumptions and deformation behavior.
 
 **Author:** Joseph Janicki · **Course:** Computer Vision · **Term:** Fall 2025
+
