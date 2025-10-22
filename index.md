@@ -102,18 +102,6 @@ Applying inverse warping produced a rectified output where **straight lines stay
   <br><span class="space-caption">Rectified result: planarity preserved, perspective corrected.</span>
 </p>
 
-<!-- Step: Virtual poster -->
-<details>
-<summary><strong>3) Virtual texture placement <span class="star">✨</span> </strong></summary>
-
-To validate the rectified geometry, I overlaid a virtual poster/texture in the rectified domain and reprojected it.  
-Because homography respects planar projective geometry, the texture sits realistically on the surface without bending.
-</details>
-
-<p align="center">
-  <img src="images/virtual_poster.jpg" width="65%" class="space-img">
-  <br><span class="space-caption">Virtual content aligned on the rectified plane.</span>
-</p>
 
 <div class="hr"></div>
 <details>
@@ -128,6 +116,20 @@ In practice, this lets any planar region—posters, signs, or screens—be recti
 
 ##  Part 2 — 🌌 Planar Warping & Texture Placement
 
+<!-- Step: Virtual poster -->
+<details>
+<summary><strong>3) Virtual texture placement <span class="star">✨</span> </strong></summary>
+
+To validate the rectified geometry, I overlaid a virtual poster/texture in the rectified domain and reprojected it.  
+Because homography respects planar projective geometry, the texture sits realistically on the surface without bending.
+</details>
+
+<p align="center">
+  <img src="images/virtual_poster.jpg" width="65%" class="space-img">
+  <br><span class="space-caption"> texture to be projected.</span>
+</p>
+
+
 <details open>
 <summary><strong>1) Baseline – Rectified AR Poster Projection <span class="star">✨</span> </strong></summary>
 
@@ -141,10 +143,6 @@ Because the transform preserves projective geometry, the poster adheres convinci
   <br><span class="space-caption">Original scene prior to poster projection.</span>
 </p>
 
-<p align="center">
-  <img src="images/virtual_poster.jpg" width="65%" class="space-img">
-  <br><span class="space-caption">texture being projected.</span>
-</p>
 
 <p align="center">
   <img src="images/ar_insert.png" width="65%" class="space-img">
@@ -302,4 +300,5 @@ Adding **anchor points** (cheeks/chin) localizes TPS; adding **more triangles** 
 - The Cat→Bulbasaur demo shows both are mathematically correct—just different continuity assumptions and deformation behavior.
 
 **Author:** Joseph Janicki · **Course:** Computer Vision · **Term:** Fall 2025
+
 
