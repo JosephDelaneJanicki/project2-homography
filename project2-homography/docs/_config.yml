@@ -7,16 +7,19 @@ remote_theme: daattali/beautiful-jekyll
 markdown: kramdown
 plugins:
   - jekyll-seo-tag
+  - jekyll-remote-theme
 
 # ──────────────────────────────
 # Visual Options
 # ──────────────────────────────
 darkmode: true
 
-title-img: "/assets/images/nebula-header.jpg"
+# Optional: only if you actually add this image
+# title-img: "/assets/images/nebula-header.jpg"
 
 accent-color: "#FFC857"
 
+# Load your custom CSS
 custom-css:
   - "/assets/css/style.css"
 
@@ -31,7 +34,7 @@ navbar-links:
     - "Contact": "mailto:Joseph.D.Janicki@gmail.com"
 
 # ──────────────────────────────
-# 🪐 Author Info
+# Author Info
 # ──────────────────────────────
 author:
   name: "Joseph Janicki"
