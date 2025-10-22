@@ -118,7 +118,7 @@ In practice, this lets any planar region—posters, signs, or screens—be recti
 
 <!-- Step: Virtual poster -->
 <details>
-<summary><strong>3) Virtual texture placement <span class="star">✨</span> </strong></summary>
+<summary><strong>1) Virtual texture placement <span class="star">✨</span> </strong></summary>
 
 To validate the rectified geometry, I overlaid a virtual poster/texture in the rectified domain and reprojected it.  
 Because homography respects planar projective geometry, the texture sits realistically on the surface without bending.
@@ -131,7 +131,7 @@ Because homography respects planar projective geometry, the texture sits realist
 
 
 <details open>
-<summary><strong>1) Baseline – Rectified AR Poster Projection <span class="star">✨</span> </strong></summary>
+<summary><strong>2) Baseline – Rectified AR Poster Projection <span class="star">✨</span> </strong></summary>
 
 Part 2 begins by extending the rectification work from Part 1 into a simple **augmented-reality placement** task.  
 Using the computed homography, I projected a poster image directly onto a planar surface in a new scene.  
@@ -152,7 +152,7 @@ Because the transform preserves projective geometry, the poster adheres convinci
 ---
 
 <details>
-<summary><strong>2) Observations and Limitations of the Baseline <span class="star">✨</span> </strong></summary>
+<summary><strong>3) Observations and Limitations of the Baseline <span class="star">✨</span> </strong></summary>
 
 The baseline successfully made the poster appeared naturally attached to the surface.  
 However, it still relied on manual point correspondences.  
@@ -163,7 +163,7 @@ These observations motivated my attempt to **automate the planar region detectio
 ---
 
 <details>
-<summary><strong>3) Extension – Toward Automatic Placement <span class="star">✨</span> </strong></summary>
+<summary><strong>4) Extension – Toward Automatic Placement <span class="star">✨</span> </strong></summary>
 
 To remove manual selection, I experimented with using the image’s geometry itself to infer placement regions.  
 I detected strong line segments with **Canny + Hough**, grouped them by orientation, and estimated **vanishing points** to sketch perspective-aligned quads.  
@@ -174,7 +174,7 @@ This allowed the system to propose plausible surfaces autonomously—essentially
 ---
 
 <details>
-<summary><strong>4) Added Improvements – Masking and Quad Scoring <span class="star">✨</span> </strong></summary>
+<summary><strong>5) Added Improvements – Masking and Quad Scoring <span class="star">✨</span> </strong></summary>
 
 While promising, the first automatic results were unstable in cluttered or low-contrast scenes.  
 To improve consistency, I added:
@@ -201,7 +201,7 @@ These filters helped the algorithm ignore distracting edges and choose more reli
 ---
 
 <details>
-<summary><strong>5) Final Hybrid Result <span class="star">✨</span> </strong></summary>
+<summary><strong>6) Final Hybrid Result <span class="star">✨</span> </strong></summary>
 
 By combining **vanishing-point inference**, **mask filtering**, and **contour scoring**, the system achieved robust, hands-free texture placement across multiple scenes.  
 The resulting projection required no user input and maintained realistic perspective even under challenging conditions.
@@ -300,5 +300,6 @@ Adding **anchor points** (cheeks/chin) localizes TPS; adding **more triangles** 
 - The Cat→Bulbasaur demo shows both are mathematically correct—just different continuity assumptions and deformation behavior.
 
 **Author:** Joseph Janicki · **Course:** Computer Vision · **Term:** Fall 2025
+
 
 
