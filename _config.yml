@@ -4,7 +4,12 @@
 title: "Project 2 – Image Homography and Warping"
 description: "Comparison of Homography, Triangular Mesh, and Thin Plate Spline Warping"
 remote_theme: daattali/beautiful-jekyll
+
 markdown: kramdown
+kramdown:
+  input: GFM
+  math_engine: mathjax
+
 plugins:
   - jekyll-seo-tag
   - jekyll-remote-theme
